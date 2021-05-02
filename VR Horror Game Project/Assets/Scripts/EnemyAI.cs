@@ -21,7 +21,7 @@ public class EnemyAI : MonoBehaviour
 
     public GameObject VRRig;
 
-    public float listenDistance = 5f;
+    public float listenDistance = 3f;
     public float listenSpeedThreshold = 0.5f;
 
     //순찰 관련 변수
@@ -231,6 +231,14 @@ public class EnemyAI : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
         attackSource = gameObject.AddComponent<AudioSource>();
 
+        audioSource.spatialBlend = 1.0f;
+        audioSource.minDistance = 0.1f;
+        audioSource.maxDistance = 10.0f;
+
+        attackSource.spatialBlend = 1.0f;
+        attackSource.minDistance = 0.1f;
+        attackSource.maxDistance = 10.0f;
+
         FindNearestWayPoint();
         StartPatrol();
     }
@@ -271,14 +279,12 @@ public class EnemyAI : MonoBehaviour
     public void growlingsound()
     {
         audioSource.clip = growling;
-        audioSource.maxDistance = 8;
         audioSource.Play();
     }
 
     public void attacksound()
     {
         attackSource.clip = attackclip;
-        attackSource.maxDistance = 4;
         attackSource.Play();
 
         barksound();
@@ -289,7 +295,6 @@ public class EnemyAI : MonoBehaviour
         int idx = Random.Range(0, bark.Length);
 
         audioSource.clip = bark[idx];
-        audioSource.maxDistance = 4;
         audioSource.Play();
     }
 }

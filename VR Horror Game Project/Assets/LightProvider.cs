@@ -28,7 +28,7 @@ public class LightProvider : MonoBehaviour
                 {
                     if (t_hit.transform.tag == "Player" || t_hit.transform.tag == "Right Hand")
                     {
-                        //Debug.Log("빛 받는 중");
+                        Debug.Log("빛 받는 중");
                         player.GetComponent<PlayerLittedState>().isPlayerLitted = true;
                     }
                     else

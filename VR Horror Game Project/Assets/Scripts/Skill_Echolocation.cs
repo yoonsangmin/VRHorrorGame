@@ -61,21 +61,32 @@ public class Skill_Echolocation : MonoBehaviour
     float delayTime = 0f;
     float reducedValue = 0f;
 
+    private float cooltime = 0.2f;
+    private float timer = 0.2f;
+
     List<HitData> castedDatas = new List<HitData>();
     List<HitData> checkedDatas = new List<HitData>();
 
     //캐릭터가 소리를 내기 때문에 캐릭터 자리에 사운드 생성 및 재생. 이후 반사 연산 코루틴 실행.  
     void Update()
     {
-        //버튼 클릭 구현
-        InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
-        device.TryGetFeatureValue(CommonUsages.trigger, out buttonPressedAxisValue);
+        //쿨 타임
 
-        if (buttonPressedAxisValue >= 0.5f)
-            isButtonPressing = true;
-        else
-            isButtonPressing = false;
+        timer += Time.deltaTime;
 
+        if(timer >= cooltime)
+        {
+            //버튼 클릭 구현
+            InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
+            device.TryGetFeatureValue(CommonUsages.trigger, out buttonPressedAxisValue);
+
+            if (buttonPressedAxisValue >= 0.5f)
+                isButtonPressing = true;
+            else
+                isButtonPressing = false;
+
+            timer = 0.0f;
+        }
 
         PlayerLocalToWorldPoint = PlayerObj.transform.TransformPoint(PlayerObj.transform.localPosition);
         if (isButtonPressing && !isButtonPressed)

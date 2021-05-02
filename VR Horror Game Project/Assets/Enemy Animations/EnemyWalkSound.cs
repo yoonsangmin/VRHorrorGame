@@ -13,7 +13,10 @@ public class EnemyWalkSound : MonoBehaviour
     void Start()
     {
         walkSource = gameObject.AddComponent<AudioSource>();
-        
+
+        walkSource.spatialBlend = 1.0f;
+        walkSource.minDistance = 0.1f;
+        walkSource.maxDistance = 10.0f;
     }
 
     // Update is called once per frame
@@ -27,7 +30,6 @@ public class EnemyWalkSound : MonoBehaviour
         int idx = Random.Range(0, walkSound.Length);
 
         walkSource.clip = walkSound[idx];
-        walkSource.maxDistance = 4;
         walkSource.Play();
     }
 
