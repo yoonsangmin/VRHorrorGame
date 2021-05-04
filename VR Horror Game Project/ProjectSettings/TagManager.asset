@@ -6,10 +6,10 @@ TagManager:
   tags:
   - Obstacle
   - Right Hand
-  - Card1
   - ButtonActivator
   - VRRig
   - FlashLight
+  - Card
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,7 @@ public class OpenDoor : MonoBehaviour
 {
     public GameObject openPosObj;
 
-    Vector3 closedPos;
+    //Vector3 closedPos;
 
     bool isDoorOpened = false;
     bool activate = false;
@@ -23,7 +23,7 @@ public class OpenDoor : MonoBehaviour
         audioSource.clip = audioClip;
         audioSource.spatialBlend = 1.0f;
 
-        closedPos = transform.position;
+        //closedPos = transform.position;
     }
 
     // Update is called once per frame
