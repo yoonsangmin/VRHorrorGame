@@ -11,9 +11,18 @@ public class OpenDoor : MonoBehaviour
     bool isDoorOpened = false;
     bool activate = false;
 
+    bool isSoundPlayed = false;
+
+    public AudioClip audioClip;
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = this.gameObject.AddComponent<AudioSource>();
+        audioSource.clip = audioClip;
+        audioSource.spatialBlend = 1.0f;
+
         closedPos = transform.position;
     }
 
@@ -26,10 +35,17 @@ public class OpenDoor : MonoBehaviour
 
     void Open()
     {
-        transform.position = Vector3.Lerp(transform.position, openPosObj.transform.position, 0.02f);
+        if(!isSoundPlayed)
+        {
+            audioSource.Play();
+            isSoundPlayed = true;
+        }
+            
+        transform.position = Vector3.Lerp(transform.position, openPosObj.transform.position, 0.01f);
         
         if(transform.position == openPosObj.transform.position)
         {
+            audioSource.Stop();
             isDoorOpened = true;
         }
     }
