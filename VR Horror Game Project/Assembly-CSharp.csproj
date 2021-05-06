@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Enemy Animations\EnemyWalkSound.cs" />
+    <Compile Include="Assets\GrabSound.cs" />
     <Compile Include="Assets\OpenSmallDoor.cs" />
     <Compile Include="Assets\Scripts\AttackState.cs" />
     <Compile Include="Assets\Scripts\ButtonTrigger.cs" />
@@ -624,94 +625,94 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Subsystem.Registration">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Interaction.Toolkit">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Interaction.Toolkit.Editor">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.Editor.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InputSystem">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management.Editor">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>F:/GraduationPorject/VR Horror Game Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Users/Acer/Unity Projects/VR/VR Horror Project/VR Horror Game Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

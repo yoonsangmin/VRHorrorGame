@@ -1915,6 +1915,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayerLitted: 0
+  flashLight: {fileID: 0}
+  lightThresholdDistance: 1
 --- !u!1 &6053954431454757934
 GameObject:
   m_ObjectHideFlags: 0
