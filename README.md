@@ -70,7 +70,7 @@
 ---
 
 - **유튜브 : [https://www.youtube.com/watch?v=Yh8qUwMy0QQ](https://www.youtube.com/watch?v=Yh8qUwMy0QQ)**
-- **Git Hub : [https://github.com/yun-sangmin/GraduationProject](https://github.com/yun-sangmin/GraduationProject)**
+- **Git Hub : [https://github.com/yoonsangmin/GraduationProject](https://github.com/yoonsangmin/GraduationProject)**
 
 ## 영상
 
