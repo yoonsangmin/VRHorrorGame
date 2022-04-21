@@ -2,8 +2,6 @@
 
 # 👉개요
 
----
-
 ## 게임 개요
 
 - **게임 이름 : Invisible Menace**
@@ -32,8 +30,6 @@
 ![8.png](Invisible%20Menace%2018166e0b5f964ddb9d3ab7cc6f8cfb65/8.png)
 
 # 👉특징
-
----
 
 ## 담당 업무
 
@@ -66,8 +62,6 @@
  - ✔ 3D Text와 이벤트 이용한 이벤트에 의해 작동되는 자막 기능 구현
 
 # 👉참고 링크
-
----
 
 - **유튜브 : [https://www.youtube.com/watch?v=Yh8qUwMy0QQ](https://www.youtube.com/watch?v=Yh8qUwMy0QQ)**
 - **Git Hub : [https://github.com/yoonsangmin/GraduationProject](https://github.com/yoonsangmin/GraduationProject)**
