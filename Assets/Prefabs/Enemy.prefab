@@ -901,6 +901,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f332eee06021e3a48867dfaf8d251306, type: 3}
   - {fileID: 8300000, guid: ad781afd1f5ad7745a35ce489d83e879, type: 3}
   - {fileID: 8300000, guid: 7c81a4a5352999e4cbf96542af351c17, type: 3}
+  walkParticle: {fileID: 1613516568673740775, guid: ce003fcd363bdc74c9160dd363c8f6bd,
+    type: 3}
 --- !u!1 &2493800643032408147
 GameObject:
   m_ObjectHideFlags: 0

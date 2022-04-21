@@ -9,6 +9,8 @@ public class PauseAndCallMenu : MonoBehaviour
     public XRNode inputSource;
 
     public GameObject menuPanel;
+    public GameObject gameRolePanel;
+    public GameObject toTitlePanel;
 
     bool isPressed = false;
     bool isPressing = false;
@@ -16,6 +18,14 @@ public class PauseAndCallMenu : MonoBehaviour
 
     public Transform target;
     public Vector3 offset;
+
+    public bool isPopUpOpened = false;
+
+    public GameObject popUpPanel;
+    public Vector3 popUpOffset;
+
+    List<GameObject> popPanels = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,12 +38,30 @@ public class PauseAndCallMenu : MonoBehaviour
         InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
         device.TryGetFeatureValue(CommonUsages.secondaryButton, out isPressing);
 
-        if (isPressing && !isPressed)
+        if(isPopUpOpened)
+        {
+            if (popPanels.Count != 0)
+                popPanels[0].SetActive(true);
+
+
+            popUpPanel.SetActive(true);
+
+
+            transform.eulerAngles = new Vector3(0, target.eulerAngles.y, 0);
+
+            popUpPanel.transform.position = target.position + Vector3.up * popUpOffset.y
+        + Vector3.ProjectOnPlane(target.right, Vector3.up).normalized * popUpOffset.x
+        + Vector3.ProjectOnPlane(target.forward, Vector3.up).normalized * popUpOffset.z;
+        }
+
+        else if (isPressing && !isPressed)
         {
             if (isPause == false)
             {
-                Time.timeScale = 0;
                 isPause = true;
+
+                gameRolePanel.SetActive(false);
+                toTitlePanel.SetActive(false);
 
                 menuPanel.SetActive(true);
 
@@ -43,6 +71,7 @@ public class PauseAndCallMenu : MonoBehaviour
                 menuPanel.transform.position = target.position + Vector3.up * offset.y
             + Vector3.ProjectOnPlane(target.right, Vector3.up).normalized * offset.x
             + Vector3.ProjectOnPlane(target.forward, Vector3.up).normalized * offset.z;
+                Time.timeScale = 0;
             }
 
             else if (isPause == true)
@@ -54,6 +83,28 @@ public class PauseAndCallMenu : MonoBehaviour
             }
         }
 
+        else
+        {
+            popUpPanel.SetActive(false);
+        }
+
         isPressed = isPressing;
+    }
+    
+    public void QuitPopUp()
+    {
+        Destroy(popPanels[0]);
+        popPanels.RemoveAt(0);
+
+        if(popPanels.Count == 0)
+            isPopUpOpened = false;
+    }
+
+    public void PopPanel(GameObject go)
+    {
+        GameObject temp = Instantiate(go, popUpPanel.transform);
+        popPanels.Add(temp);
+        popPanels[popPanels.Count - 1].SetActive(false);
+        isPopUpOpened = true;
     }
 }

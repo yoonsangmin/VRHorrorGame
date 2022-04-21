@@ -1,9 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class FlashLight : MonoBehaviour
 {
+    public XRNode inputSource;
+
+    private float triggerAxis;
+    private bool keyDown;
+    private bool prevKeyDown;
+
+
+
     public GameObject flashLight;
 
     public Material[] offMat;
@@ -17,11 +27,14 @@ public class FlashLight : MonoBehaviour
     public AudioClip audioClip;
     private AudioSource audioSource;
 
+    private ItemManager itemManager;
+
     private void Start()
     {
         audioSource = this.gameObject.AddComponent<AudioSource>();
         audioSource.clip = audioClip;
         audioSource.spatialBlend = 0.7f;
+        audioSource.playOnAwake = false;
 
         meshRenderer = this.gameObject.GetComponent<MeshRenderer>();
         offMats = meshRenderer.materials;
@@ -36,6 +49,8 @@ public class FlashLight : MonoBehaviour
 
         meshRenderer.materials = offMats;
         flashLight.SetActive(false);
+
+        itemManager = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<ItemManager>();
     }
 
     public void TurnOnFlash()
@@ -52,5 +67,46 @@ public class FlashLight : MonoBehaviour
             flashLight.SetActive(false);
             audioSource.Play();
         }    
+    }
+
+
+    bool onClick()
+    {
+        InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
+        device.TryGetFeatureValue(CommonUsages.trigger, out triggerAxis);
+
+        if (triggerAxis >= 0.5f)
+            keyDown = true;
+        else
+            keyDown = false;
+
+        if (keyDown && !prevKeyDown)
+        {
+            prevKeyDown = keyDown;
+            return true;
+        }
+
+        prevKeyDown = keyDown;
+        return false;
+    }
+
+    private void Update()
+    {
+        if (itemManager.leftItemIdx == 1)
+        {
+            inputSource = XRNode.LeftHand;
+            if (onClick())
+            {
+                TurnOnFlash();
+            }
+        }
+        else if (itemManager.rightItemIdx == 1)
+        {
+            inputSource = XRNode.RightHand;
+            if (onClick())
+            {
+                TurnOnFlash();
+            }
+        }
     }
 }

@@ -106,6 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e10e0647303ff04aa4b951db5fd8d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particle: {fileID: 1613516568673740775, guid: ce003fcd363bdc74c9160dd363c8f6bd,
+    type: 3}
   onCardHover:
     m_PersistentCalls:
       m_Calls:

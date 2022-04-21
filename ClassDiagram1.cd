@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BGMControl" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAgAACAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\BGMControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CanControl" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAACAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\CanControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CanPocket" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAECAAABBAAIAAIAAEAACBAKAYQgAQAAAAAAA=</HashCode>
+      <FileName>Assets\CanPocket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CanSound">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAgAAAAAAAAAEAAMAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\CanSound.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CanSoundManager">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAAAACAIAAAAAAAAIAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Assets\CanSoundManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaptionManager">
+    <Position X="23.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAICAAAAABAAYACAAAAABAAgAAQAAAAAgAAEA=</HashCode>
+      <FileName>Assets\CaptionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaptionRequest">
+    <Position X="25.75" Y="0.75" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="CaptionRequest.CaptionStruct" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\CaptionRequest.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ABQAMAAgACAAABABAAACAAAAAAEAQAAAIQAAAACAAAA=</HashCode>
+      <FileName>Assets\CaptionRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChangeItem">
+    <Position X="18.5" Y="15.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="ChangeItem.Hand" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\ChangeItem.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQAAACAACAABFAgAIgAAAAAAAAABgEAEAAgACEAAAA=</HashCode>
+      <FileName>Assets\ChangeItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyWalkSound">
+    <Position X="22.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAgAAEAAAAAQAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Enemy Animations\EnemyWalkSound.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrabSound" Collapsed="true">
+    <Position X="11" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAAACAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GrabSound.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemManager">
+    <Position X="16.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAACACAACAAAAAAAAAAAAgAAQCAAAAABADAAA=</HashCode>
+      <FileName>Assets\ItemManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenSmallDoor" Collapsed="true">
+    <Position X="16.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAACAAIAAABAAAQAAAAAAAkAAABAAAAAAAAgA=</HashCode>
+      <FileName>Assets\OpenSmallDoor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerTrigger">
+    <Position X="25.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAEAAAAAAAAAAAAAAAAAAAAQEAAAAAAAAA=</HashCode>
+      <FileName>Assets\PlayerTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AttackState">
+    <Position X="40" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAAAAAAAAAAAQAYAAAAAEAAAAAIAAAAM=</HashCode>
+      <FileName>Assets\Scripts\AttackState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="bangle" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\bangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ButtonTrigger" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAAAAACAAAAAAAAgEQAABAAAAAIAAQAAAABAAAgA=</HashCode>
+      <FileName>Assets\Scripts\ButtonTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CardDetecter" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACQAAAAAAAgAAAABIAAAAAEAQAAABAAAAoA=</HashCode>
+      <FileName>Assets\Scripts\CardDetecter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ContinuousMovement">
+    <Position X="12.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAYIAAgAAiAAAAgAAAAQQAAAAQAAAQAAAAAAAAEAAgA=</HashCode>
+      <FileName>Assets\Scripts\ContinuousMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EndGame">
+    <Position X="13" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAACAQEAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\EndGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyAI">
+    <Position X="42.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQACAECISIAEEAAQBwwQACUAEAgHQCBAGAMgCSCQqI=</HashCode>
+      <FileName>Assets\Scripts\EnemyAI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlashLight" Collapsed="true">
+    <Position X="12.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAIAACAAAAAAEkiAAAAAgAGEAAgA=</HashCode>
+      <FileName>Assets\Scripts\FlashLight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlashLight1" Collapsed="true">
+    <Position X="14.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAACAAAAAAEkCAAAAAAAEAAAgA=</HashCode>
+      <FileName>Assets\Scripts\FlashLight1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FollowCamera">
+    <Position X="14" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FollowCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FollowState">
+    <Position X="35.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAQAAAAAAAAAAAAYAAAAAAAAAAAIAAAAI=</HashCode>
+      <FileName>Assets\Scripts\FollowState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FollowToTheVest">
+    <Position X="3.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAgAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FollowToTheVest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameRole" Collapsed="true">
+    <Position X="8" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAAACAABAAAACAAAAECAAAEAIAQAAAIAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameRole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HandButton" Collapsed="true">
+    <Position X="10.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAAAAABAAAAAAAAAAAAAAAQAACAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\HandButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HandPresence" Collapsed="true">
+    <Position X="14.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASASIAAACAAAAEAAAAAAAEEAAAAAABAAAAAAIAAAAI=</HashCode>
+      <FileName>Assets\Scripts\HandPresence.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IdleState">
+    <Position X="36.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAIAAAAI=</HashCode>
+      <FileName>Assets\Scripts\IdleState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LightProvider">
+    <Position X="24.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAQAAAAAAEAAAAABAAAAgABCAAA=</HashCode>
+      <FileName>Assets\Scripts\LightProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocomotionController">
+    <Position X="2" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAgCAAEAAAAQAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\LocomotionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenDoor" Collapsed="true">
+    <Position X="12.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAACAAIAAAAAACQAAAAAAAkAAABAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\OpenDoor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenDoorCard" Collapsed="true">
+    <Position X="14.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAIAAAAAACQAAAAAAAAAAABAAQQAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\OpenDoorCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatrolState">
+    <Position X="34.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAIAAAAI=</HashCode>
+      <FileName>Assets\Scripts\PatrolState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseAndCallMenu">
+    <Position X="21.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAIBAAoCAAAAAAIAAAIgAEgAAAAAIAAAAwCAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\PauseAndCallMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerLittedState">
+    <Position X="26.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAIAAAAAAAQCAABAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PlayerLittedState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReadyState">
+    <Position X="37.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAIAAAAI=</HashCode>
+      <FileName>Assets\Scripts\ReadyState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneChanger">
+    <Position X="10.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAgAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\SceneChanger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HitData">
+    <Position X="25.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAABAAAAAAAAAAAAAACAACAABAAAABAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Skill_Echolocation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skill_Echolocation" Collapsed="true">
+    <Position X="16.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AERIAAAgQAARAAgAQAAAAIACgAAEAAEAEJAEAAAEAAE=</HashCode>
+      <FileName>Assets\Scripts\Skill_Echolocation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WalkSound" Collapsed="true">
+    <Position X="9" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAYAQGBAAgAAAAAAIAACAAAAAQAAAEAAEAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\WalkSound.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToTitleButton">
+    <Position X="8.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\ToTitleButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.Core.Extensions.ColliderExtensions" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ColliderExtension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>

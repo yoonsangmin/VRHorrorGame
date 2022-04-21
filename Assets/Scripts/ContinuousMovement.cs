@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.Events;
 
 public class ContinuousMovement : MonoBehaviour
 {
+    [SerializeField]
+
+    private UnityEvent onButtonPressed;
+
     public float speed = 1;
     public XRNode inputSource;
     public float gravity = -9.81f;
@@ -29,6 +34,16 @@ public class ContinuousMovement : MonoBehaviour
     {
         InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
         device.TryGetFeatureValue(CommonUsages.primary2DAxis, out inputAxis);
+
+        // 핫 키
+        bool secondaryButton = false;
+        device.TryGetFeatureValue(CommonUsages.primaryButton, out secondaryButton);
+
+        if(secondaryButton)
+        {
+            //Debug.Log("버튼 눌림 들어옴");
+            onButtonPressed?.Invoke();
+        }
     }
 
     private void FixedUpdate()

@@ -46,9 +46,9 @@ public class Skill_Echolocation : MonoBehaviour
     public GameObject EchoSoundObj;
     public GameObject PlayerObj;        //나중에 손으로 위치 바꾸기
     public GameObject raydirObj;
-    public XRNode inputSource;
+    //public XRNode inputSource;
 
-    float buttonPressedAxisValue;
+    //float buttonPressedAxisValue;
     bool isButtonPressing = false;
     bool isButtonPressed = false;
 
@@ -67,6 +67,22 @@ public class Skill_Echolocation : MonoBehaviour
     List<HitData> castedDatas = new List<HitData>();
     List<HitData> checkedDatas = new List<HitData>();
 
+    public void button_click()
+    {
+        if (timer >= cooltime)
+        {
+            PlayerLocalToWorldPoint = PlayerObj.transform.TransformPoint(PlayerObj.transform.localPosition);
+            GameObject InstnatiateEchoSoundObj = Instantiate(EchoSoundObj, PlayerLocalToWorldPoint, Quaternion.identity) as GameObject;
+            AudioSource Echosound = InstnatiateEchoSoundObj.GetComponent<AudioSource>();
+            Echosound.Play();
+            Destroy(InstnatiateEchoSoundObj, 1f);
+
+            StartCoroutine(CastEcholocationSphere());
+
+            timer = 0.0f;
+        }
+    }
+
     //캐릭터가 소리를 내기 때문에 캐릭터 자리에 사운드 생성 및 재생. 이후 반사 연산 코루틴 실행.  
     void Update()
     {
@@ -74,32 +90,34 @@ public class Skill_Echolocation : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        if(timer >= cooltime)
-        {
-            //버튼 클릭 구현
-            InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
-            device.TryGetFeatureValue(CommonUsages.trigger, out buttonPressedAxisValue);
+        //if (timer >= cooltime)
+        //{
+        //    //버튼 클릭 구현
+        //    InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
+        //    device.TryGetFeatureValue(CommonUsages.trigger, out buttonPressedAxisValue);
 
-            if (buttonPressedAxisValue >= 0.5f)
-                isButtonPressing = true;
-            else
-                isButtonPressing = false;
+        //    if (buttonPressedAxisValue >= 0.5f)
+        //        isButtonPressing = true;
+        //    else
+        //        isButtonPressing = false;
 
-            timer = 0.0f;
-        }
+        //    timer = 0.0f;
+        //}
 
-        PlayerLocalToWorldPoint = PlayerObj.transform.TransformPoint(PlayerObj.transform.localPosition);
-        if (isButtonPressing && !isButtonPressed)
-        {
-            GameObject InstnatiateEchoSoundObj = Instantiate(EchoSoundObj, PlayerLocalToWorldPoint, Quaternion.identity) as GameObject;
-            AudioSource Echosound = InstnatiateEchoSoundObj.GetComponent<AudioSource>();
-            Echosound.Play();
-            Destroy(InstnatiateEchoSoundObj, 1f);
+        //PlayerLocalToWorldPoint = PlayerObj.transform.TransformPoint(PlayerObj.transform.localPosition);
+        //if (isButtonPressing && !isButtonPressed)
+        //{
+        //    GameObject InstnatiateEchoSoundObj = Instantiate(EchoSoundObj, PlayerLocalToWorldPoint, Quaternion.identity) as GameObject;
+        //    AudioSource Echosound = InstnatiateEchoSoundObj.GetComponent<AudioSource>();
+        //    Echosound.Play();
+        //    Destroy(InstnatiateEchoSoundObj, 1f);
 
-            StartCoroutine(CastEcholocationSphere());
-        }
+        //    StartCoroutine(CastEcholocationSphere());
+        //}
 
-        isButtonPressed = isButtonPressing;
+        //isButtonPressed = isButtonPressing;
+
+
     }
     //소리를 재현해줄 레이캐스트를 쏘는 함수. 미쳐버린 삼중포문이 특징
     //수정하려 했으나 반복 횟수가 높지 않기에 그냥 그대로 두었다.

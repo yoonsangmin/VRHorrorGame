@@ -14,6 +14,8 @@ public class FollowToTheVest : MonoBehaviour
             + Vector3.ProjectOnPlane(target.right, Vector3.up).normalized * offset.x
             + Vector3.ProjectOnPlane(target.forward, Vector3.up).normalized * offset.z;
 
-        transform.eulerAngles = new Vector3(0, target.eulerAngles.y, 0);
+        Vector3 rot3 = Vector3.ProjectOnPlane(target.right, Vector3.up).normalized;
+        transform.eulerAngles = new Vector3(0, -Mathf.Atan2(rot3.normalized.z, rot3.normalized.x) * Mathf.Rad2Deg, 0);
+
     }
 }

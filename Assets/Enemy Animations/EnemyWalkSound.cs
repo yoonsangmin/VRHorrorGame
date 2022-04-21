@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyWalkSound : MonoBehaviour
 {
     public AudioClip[] walkSound;
-    
+
+    public GameObject walkParticle;
 
     AudioSource walkSource;
 
@@ -16,7 +17,8 @@ public class EnemyWalkSound : MonoBehaviour
 
         walkSource.spatialBlend = 1.0f;
         walkSource.minDistance = 0.1f;
-        walkSource.maxDistance = 10.0f;
+        walkSource.rolloffMode = AudioRolloffMode.Custom;
+        walkSource.maxDistance = 6.0f;
     }
 
     // Update is called once per frame
@@ -28,9 +30,11 @@ public class EnemyWalkSound : MonoBehaviour
     public void walksound()
     {
         int idx = Random.Range(0, walkSound.Length);
+        GameObject instantiatedParticle = Instantiate(walkParticle, this.transform.position, this.transform.rotation) as GameObject;
 
         walkSource.clip = walkSound[idx];
         walkSource.Play();
+        Destroy(instantiatedParticle, 1f);
     }
 
     

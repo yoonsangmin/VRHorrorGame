@@ -31,50 +31,79 @@ public class FollowState : StateMachineBehaviour
             enemy.m_enemy.SetDestination(enemy.m_target.position);
         }
 
-        enemy.Sight_Obstacle();
+        //enemy.Sight_Obstacle();
 
-        Debug.Log(enemy.playerBehindObstacle + timer.ToString());
+        //Debug.Log(enemy.playerBehindObstacle + timer.ToString());
 
-        if (enemy.playerBehindObstacle && timer <= 0)
+        //if (enemy.playerBehindObstacle && timer <= 0)
+        //{
+        //    animator.SetBool("IsPatrol", true);
+        //    animator.SetBool("IsFollow", false);
+
+        //    enemy.RemoveTarget();
+
+        //    enemy.FindNearestWayPoint();
+        //    enemy.StartPatrol();
+        //}
+
+        if(enemy.m_target != null)
         {
-            animator.SetBool("IsPatrol", true);
-            animator.SetBool("IsFollow", false);
+            if (Vector3.Distance(enemy.m_target.transform.position, enemy.transform.position) > enemy.detect_distance)
+            {
+                animator.SetBool("IsPatrol", true);
+                animator.SetBool("IsFollow", false);
 
+                enemy.RemoveTarget();
+
+                enemy.FindNearestWayPoint();
+                enemy.StartPatrol();
+            }
+
+            else if (Vector3.Distance(enemy.player.transform.position, enemy.transform.position) < enemy.attackDistance)
+            {
+                animator.SetBool("IsPatrol", false);
+                animator.SetBool("IsFollow", false);
+
+                enemy.m_enemy.ResetPath();
+            }
+
+            //
+            else if (Vector3.Distance(enemy.m_target.transform.position, enemy.transform.position) < 1.0f)
+            {
+                enemy.RemoveTarget();
+
+                //enemy.FindNearestWayPoint();
+                enemy.StartPatrol();
+
+                animator.SetBool("IsPatrol", true);
+                animator.SetBool("IsFollow", false);
+            }
+        }
+
+        else
+        {
             enemy.RemoveTarget();
 
-            enemy.FindNearestWayPoint();
+            //enemy.FindNearestWayPoint();
             enemy.StartPatrol();
-        }
 
-        if (Vector3.Distance(enemy.player.transform.position, enemy.transform.position) > enemy.m_distance)
-        {
             animator.SetBool("IsPatrol", true);
             animator.SetBool("IsFollow", false);
-
-            enemy.RemoveTarget();
-
-            enemy.FindNearestWayPoint();
-            enemy.StartPatrol();
         }
 
-        else if (Vector3.Distance(enemy.player.transform.position, enemy.transform.position) < enemy.attackDistance)
-        {
-            animator.SetBool("IsPatrol", false);
-            animator.SetBool("IsFollow", false);
-
-            enemy.m_enemy.ResetPath();
-        }
         
         
-        if (enemy.playerBehindObstacle)
-        {
-            timer -= Time.deltaTime;
-        }
+        //
 
-        else if (!enemy.playerBehindObstacle)
-        {
-            timer = time;
-        }
+        //if (enemy.playerBehindObstacle)
+        //{
+        //    timer -= Time.deltaTime;
+        //}
+
+        //else if (!enemy.playerBehindObstacle)
+        //{
+        //    timer = time;
+        //}
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

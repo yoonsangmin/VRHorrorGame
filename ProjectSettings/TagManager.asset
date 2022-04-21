@@ -10,6 +10,12 @@ TagManager:
   - VRRig
   - FlashLight
   - Card
+  - CanSoundManager
+  - ItemManager
+  - Can
+  - CanPocket
+  - Grabbable
+  - MenuPanel
   layers:
   - Default
   - TransparentFX
@@ -30,8 +36,8 @@ TagManager:
   - Cabinet
   - leftDoor
   - rightDoor
-  - 
-  - 
+  - Pocket
+  - PostProcess
   - 
   - 
   - 

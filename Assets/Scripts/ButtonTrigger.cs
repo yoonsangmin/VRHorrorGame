@@ -8,6 +8,10 @@ using UnityEngine.Events;
 
 public class ButtonTrigger : MonoBehaviour
 {
+    private CanSoundManager canSoundManager;
+
+    public GameObject particle;
+
     [SerializeField]
 
     private UnityEvent onButtonPressed;
@@ -22,6 +26,7 @@ public class ButtonTrigger : MonoBehaviour
 
     private void Start()
     {
+        canSoundManager = GameObject.FindWithTag("CanSoundManager").GetComponent<CanSoundManager>();
         audio = gameObject.AddComponent<AudioSource>();
         audio.clip = buttonSound;
     }
@@ -36,6 +41,9 @@ public class ButtonTrigger : MonoBehaviour
             timer = pressCoolTime;
 
             audio.Play();
+            GameObject go = Instantiate(particle, this.transform);
+            Destroy(go, 1f);
+            canSoundManager.DropCan(this.transform);
         }
     }
 

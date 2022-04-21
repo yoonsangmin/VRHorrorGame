@@ -11,7 +11,8 @@ public class EnemyAI : MonoBehaviour
     //시야 관련 변수
 
     public float m_angle = 0f;
-    public float m_distance = 0f;
+    public float detect_distance = 0f;
+    public float sight_distance = 0f;
     [SerializeField] LayerMask m_layerMask = 0;
     public LayerMask exc_layerMask;
 
@@ -21,14 +22,18 @@ public class EnemyAI : MonoBehaviour
 
     public GameObject VRRig;
 
-    public float listenDistance = 3f;
-    public float listenSpeedThreshold = 0.5f;
+    public float listenDistance = 5f;
+    public float listenSpeedThreshold = 2.5f;
 
     //순찰 관련 변수
 
     public NavMeshAgent m_enemy = null;
 
     [SerializeField] Transform[] m_tfWayPotions = null;
+
+    [SerializeField] Transform[] m_tfWayPotions_EXT1 = null;
+    [SerializeField] Transform[] m_tfWayPotions_EXT2 = null;
+    [SerializeField] Transform[] m_tfWayPotions_EXT3 = null;
     int m_count = 0;
 
     public Transform m_target = null;
@@ -59,11 +64,14 @@ public class EnemyAI : MonoBehaviour
 
     float soundtimer;
 
+    // 캔 관련
+    public CanSoundManager canSoundManager;
+
     //시야 관련 함수
     //플레이어 발견했고 발견했으면 따라가야함
     public void Sight()
     {
-        Collider[] t_cols = Physics.OverlapSphere(transform.position, m_distance, m_layerMask);
+        Collider[] t_cols = Physics.OverlapSphere(transform.position, detect_distance, m_layerMask);
         
         if (t_cols.Length > 0)
         {
@@ -73,7 +81,7 @@ public class EnemyAI : MonoBehaviour
             float t_angle = Vector3.Angle(t_direction, transform.forward);
             if(t_angle < m_angle * 0.5f)
             {
-                if (Physics.Raycast(transform.position, t_direction, out RaycastHit t_hit, m_distance, exc_layerMask))
+                if (Physics.Raycast(transform.position, t_direction, out RaycastHit t_hit, sight_distance, exc_layerMask))
                 {
                     if (t_hit.transform.tag == "Player" || t_hit.transform.tag == "Right Hand")
                     {
@@ -110,11 +118,23 @@ public class EnemyAI : MonoBehaviour
                 SetTarget(player.transform);
             }
         }
+
+        // 캔 소리 듣기
+        if(m_target == null)
+        {
+            if(canSoundManager.isCanDropped)
+            {
+                if (Vector3.Distance(transform.position, canSoundManager.canDroppedTransform.position) < listenDistance)
+                {
+                    SetTarget(canSoundManager.canDroppedTransform);
+                }
+            }
+        }
     }
 
     public void Sight_Obstacle()
     {
-        Collider[] t_cols = Physics.OverlapSphere(transform.position, m_distance, m_layerMask);
+        Collider[] t_cols = Physics.OverlapSphere(transform.position, detect_distance, m_layerMask);
 
         if (t_cols.Length > 0)
         {
@@ -124,7 +144,7 @@ public class EnemyAI : MonoBehaviour
             float t_angle = Vector3.Angle(t_direction, transform.forward);
             if (t_angle < m_angle * 0.5f)
             {
-                if (Physics.Raycast(transform.position, t_direction, out RaycastHit t_hit, m_distance, exc_layerMask))
+                if (Physics.Raycast(transform.position, t_direction, out RaycastHit t_hit, sight_distance, exc_layerMask))
                 {
                     if (t_hit.transform.tag == "Player" || t_hit.transform.tag == "Right Hand")
                     {
@@ -168,16 +188,19 @@ public class EnemyAI : MonoBehaviour
     {
         m_target = null;
 
-        m_enemy.ResetPath();
+        if(this.gameObject.activeSelf)
+        {
+            m_enemy.ResetPath();
 
-        m_enemy.speed = normalSpeed;
+            m_enemy.speed = normalSpeed;
+        }
     }
 
     public void MoveToNextWayPoint()
     {
         if(m_target == null)
         {
-            if (m_enemy.velocity == Vector3.zero)
+            if (m_enemy.velocity == Vector3.zero && this.gameObject.activeSelf == true)
             {
                 m_enemy.SetDestination(m_tfWayPotions[m_count++].position);
 
@@ -227,6 +250,8 @@ public class EnemyAI : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         VRRig = GameObject.FindGameObjectWithTag("VRRig");
+
+        canSoundManager = GameObject.FindGameObjectWithTag("CanSoundManager").GetComponent<CanSoundManager>();
 
         audioSource = gameObject.AddComponent<AudioSource>();
         attackSource = gameObject.AddComponent<AudioSource>();
@@ -296,5 +321,23 @@ public class EnemyAI : MonoBehaviour
 
         audioSource.clip = bark[idx];
         audioSource.Play();
+    }
+
+    public void ExtendWayPoint1()
+    {
+        m_tfWayPotions = m_tfWayPotions_EXT1;
+        FindNearestWayPoint();
+    }
+
+    public void ExtendWayPoint2()
+    {
+        m_tfWayPotions = m_tfWayPotions_EXT2;
+        FindNearestWayPoint();
+    }
+
+    public void ExtendWayPoint3()
+    {
+        m_tfWayPotions = m_tfWayPotions_EXT3;
+        FindNearestWayPoint();
     }
 }

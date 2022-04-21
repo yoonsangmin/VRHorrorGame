@@ -239,6 +239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71f232d97c8ffe147b52f7a6c3a56c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particle: {fileID: 1613516568673740775, guid: ce003fcd363bdc74c9160dd363c8f6bd,
+    type: 3}
   onButtonPressed:
     m_PersistentCalls:
       m_Calls:

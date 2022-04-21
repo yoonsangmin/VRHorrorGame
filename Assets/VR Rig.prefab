@@ -1910,6 +1910,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff0d9ba6360b88c44b02d60321cdd12f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onButtonPressed:
+    m_PersistentCalls:
+      m_Calls: []
   speed: 2.76
   inputSource: 4
   gravity: -9.81
@@ -1950,7 +1953,6 @@ MonoBehaviour:
   EchoSoundObj: {fileID: 0}
   PlayerObj: {fileID: 2331945637185543926}
   raydirObj: {fileID: 2331945638034408037}
-  inputSource: 4
   castDistance: 4
   hfReferenceValue: 2500
   reverbRoomValue: 0
