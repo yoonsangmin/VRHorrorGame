@@ -76,5 +76,5 @@
 
 [![홍익대학교 게임소프트웨어전공 윤상민 졸업 프로젝트 - Invisible Menace](https://img.youtube.com/vi/Yh8qUwMy0QQ/0.jpg)](https://www.youtube.com/watch?v=Yh8qUwMy0QQ "홍익대학교 게임소프트웨어전공 윤상민 졸업 프로젝트 - Invisible Menace")
 
-### 클론 후 lfs로 관리 중인 file 
+### 클론 후 lfs로 관리 중인 file 다운로드 필요
 `git lfs pull`
