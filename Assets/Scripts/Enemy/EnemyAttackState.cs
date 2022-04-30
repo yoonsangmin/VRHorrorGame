@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackState : StateMachineBehaviour
+public class EnemyAttackState : StateMachineBehaviour
 {
     EnemyAI enemy;
     float time = 1;
@@ -36,13 +36,13 @@ public class AttackState : StateMachineBehaviour
 
        if(timer < time / 12 && !soundplayed)
         {
-            enemy.attacksound();
+            enemy.PlayAttacksound();
             soundplayed = true;
         }
 
        if(timer <= 0 && attackEndTimer > 0)
        {
-            Attack();
+            enemy.Attack();
 
             attackEndTimer -= Time.deltaTime;
        }
@@ -52,23 +52,5 @@ public class AttackState : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         enemy.atkDelay = enemy.atkCooltime;
-    }
-
-
-
-    public void Attack()
-    {
-        Debug.Log("1");
-        if (Vector3.Distance(enemy.player.transform.position, enemy.transform.position) < enemy.attackDistance)
-        {
-            Debug.Log("2");
-            Vector3 t_direction = (enemy.player.transform.position - enemy.transform.position).normalized;
-            float t_angle = Vector3.Angle(t_direction, enemy.transform.forward);
-            if (t_angle < enemy.m_angle)
-            {
-                Debug.Log("피격됐엉");
-                enemy.onPlayerAttacked?.Invoke();
-            }
-        }
     }
 }

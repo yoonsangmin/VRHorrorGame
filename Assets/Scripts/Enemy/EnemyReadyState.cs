@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ReadyState : StateMachineBehaviour
+public class EnemyReadyState : StateMachineBehaviour
 {
     EnemyAI enemy;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state

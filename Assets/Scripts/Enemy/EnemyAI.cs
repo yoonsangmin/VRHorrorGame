@@ -31,9 +31,6 @@ public class EnemyAI : MonoBehaviour
 
     [SerializeField] Transform[] m_tfWayPotions = null;
 
-    [SerializeField] Transform[] m_tfWayPotions_EXT1 = null;
-    [SerializeField] Transform[] m_tfWayPotions_EXT2 = null;
-    [SerializeField] Transform[] m_tfWayPotions_EXT3 = null;
     int m_count = 0;
 
     public Transform m_target = null;
@@ -293,51 +290,47 @@ public class EnemyAI : MonoBehaviour
             soundtimer = Random.Range(7, 10);
 
             if(!audioSource.isPlaying)
-                barksound();
+                PlayBarksound();
         }
             
         soundtimer -= Time.deltaTime;
     }
 
+    public void Attack()
+    {
+        Debug.Log("1");
+        if (Vector3.Distance(player.transform.position, transform.position) < attackDistance)
+        {
+            Debug.Log("2");
+            Vector3 t_direction = (player.transform.position - transform.position).normalized;
+            float t_angle = Vector3.Angle(t_direction, transform.forward);
+            if (t_angle < m_angle)
+            {
+                Debug.Log("피격됐엉");
+                onPlayerAttacked?.Invoke();
+            }
+        }
+    }
 
-
-    public void growlingsound()
+    public void PlayGrowlingsound()
     {
         audioSource.clip = growling;
         audioSource.Play();
     }
 
-    public void attacksound()
+    public void PlayAttacksound()
     {
         attackSource.clip = attackclip;
         attackSource.Play();
 
-        barksound();
+        PlayBarksound();
     }
 
-    public void barksound()
+    public void PlayBarksound()
     {
         int idx = Random.Range(0, bark.Length);
 
         audioSource.clip = bark[idx];
         audioSource.Play();
-    }
-
-    public void ExtendWayPoint1()
-    {
-        m_tfWayPotions = m_tfWayPotions_EXT1;
-        FindNearestWayPoint();
-    }
-
-    public void ExtendWayPoint2()
-    {
-        m_tfWayPotions = m_tfWayPotions_EXT2;
-        FindNearestWayPoint();
-    }
-
-    public void ExtendWayPoint3()
-    {
-        m_tfWayPotions = m_tfWayPotions_EXT3;
-        FindNearestWayPoint();
     }
 }

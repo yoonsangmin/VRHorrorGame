@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowState : StateMachineBehaviour
+public class EnemyFollowState : StateMachineBehaviour
 {
     EnemyAI enemy;
 
@@ -20,7 +20,7 @@ public class FollowState : StateMachineBehaviour
 
         enemy.m_enemy.speed = enemy.followSpeed;
 
-        enemy.growlingsound();
+        enemy.PlayGrowlingsound();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
