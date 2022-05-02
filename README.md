@@ -13,21 +13,21 @@
 
 ## 게임 이미지
 
-![1.png](Invisible%20Menace%2018166e0b5f964ddb9d3ab7cc6f8cfb65/1.png)
+![1.png](Images/1.png)
 
-![3.png](Invisible%20Menace%2018166e0b5f964ddb9d3ab7cc6f8cfb65/3.png)
+![3.png](Images/3.png)
 
-![5.png](Invisible%20Menace%2018166e0b5f964ddb9d3ab7cc6f8cfb65/5.png)
+![5.png](Images/5.png)
 
-![7.png](Invisible%20Menace%2018166e0b5f964ddb9d3ab7cc6f8cfb65/7.png)
+![7.png](Images/7.png)
 
-![2.png](Invisible%20Menace%2018166e0b5f964ddb9d3ab7cc6f8cfb65/2.png)
+![2.png](Images/2.png)
 
-![4.png](Invisible%20Menace%2018166e0b5f964ddb9d3ab7cc6f8cfb65/4.png)
+![4.png](Images/4.png)
 
-![6.png](Invisible%20Menace%2018166e0b5f964ddb9d3ab7cc6f8cfb65/6.png)
+![6.png](Images/6.png)
 
-![8.png](Invisible%20Menace%2018166e0b5f964ddb9d3ab7cc6f8cfb65/8.png)
+![8.png](Images/8.png)
 
 # 👉특징
 
