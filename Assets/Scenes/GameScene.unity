@@ -11344,7 +11344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 399437898}
   m_Layer: 0
-  m_Name: EnemyRelatedObjects
+  m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13054,9 +13054,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7421ae198677d4e40ba114acce6051e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPlayerAttacked:
-    m_PersistentCalls:
-      m_Calls: []
   m_angle: 45
   detect_distance: 0
   sight_distance: 0
@@ -23716,6 +23713,32 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1216543463}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &865084175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865084167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0f547a3ee3d564588c4cb57d205cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPlayerAttacked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1769353444}
+        m_MethodName: ToGameOverScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &869040489
 GameObject:
   m_ObjectHideFlags: 0
@@ -33807,7 +33830,7 @@ PrefabInstance:
     - target: {fileID: 2331945638094018245, guid: 13ec9e860ae29c847bf6539619342d86,
         type: 3}
       propertyPath: m_Name
-      value: VR Rig
+      value: VRRig
       objectReference: {fileID: 0}
     - target: {fileID: 2331945638094018245, guid: 13ec9e860ae29c847bf6539619342d86,
         type: 3}
@@ -34976,7 +34999,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1264155685
 Transform:
   m_ObjectHideFlags: 0
@@ -44355,7 +44378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1710090527}
   m_Layer: 0
-  m_Name: Enemies
+  m_Name: EnemyObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

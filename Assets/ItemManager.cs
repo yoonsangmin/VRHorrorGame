@@ -40,17 +40,17 @@ public class ItemManager : MonoBehaviour
     {
         if(hasItem[1] && !isFlashPlayed)
         {
-            onFlashGet?.Invoke();
+            onFlashGet.Invoke();
             isFlashPlayed = true;
         }
         if (hasItem[2] && !isYellowCardPlayed)
         {
-            onYellowCardGet?.Invoke();
+            onYellowCardGet.Invoke();
             isYellowCardPlayed = true;
         }
         if (hasItem[4] && !isRedCardPlayed)
         {
-            onRedCardGet?.Invoke();
+            onRedCardGet.Invoke();
             isRedCardPlayed = true;
         }
     }

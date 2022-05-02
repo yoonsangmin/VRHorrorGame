@@ -37,7 +37,7 @@ public class ButtonTrigger : MonoBehaviour
         if (other.IsTriggerButton() && !pressedInProgress && timer <= 0)
         {
             pressedInProgress = true;
-            onButtonPressed?.Invoke();
+            onButtonPressed.Invoke();
             timer = pressCoolTime;
 
             audio.Play();

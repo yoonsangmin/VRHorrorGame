@@ -83,7 +83,7 @@ public class ChangeItem : MonoBehaviour
                     break;
             }
 
-            onItemSelect?.Invoke();
+            onItemSelect.Invoke();
             SetItem();
         }
 
@@ -147,7 +147,7 @@ public class ChangeItem : MonoBehaviour
                     }
 
                     SetItem();
-                    onItemSelect?.Invoke();
+                    onItemSelect.Invoke();
 
                     Destroy(other.gameObject);
                 }

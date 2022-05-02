@@ -42,7 +42,7 @@ public class ContinuousMovement : MonoBehaviour
         if(secondaryButton)
         {
             //Debug.Log("버튼 눌림 들어옴");
-            onButtonPressed?.Invoke();
+            onButtonPressed.Invoke();
         }
     }
 

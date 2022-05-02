@@ -6,8 +6,6 @@ using UnityEngine.Events;
 
 public class EnemyAI : MonoBehaviour
 {
-    public UnityEvent onPlayerAttacked;
-
     //시야 관련 변수
 
     public float m_angle = 0f;
@@ -307,7 +305,7 @@ public class EnemyAI : MonoBehaviour
             if (t_angle < m_angle)
             {
                 Debug.Log("피격됐엉");
-                onPlayerAttacked?.Invoke();
+                player.GetComponent<PlayerEvent>().onPlayerAttacked.Invoke();
             }
         }
     }

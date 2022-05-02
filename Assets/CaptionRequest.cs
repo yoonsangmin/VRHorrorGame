@@ -55,7 +55,7 @@ public class CaptionRequest : MonoBehaviour
         {
             if(!isEnterPlayed)
             {
-                onEnter?.Invoke();
+                onEnter.Invoke();
             }
 
             //Debug.Log("자막실행중");
@@ -71,7 +71,7 @@ public class CaptionRequest : MonoBehaviour
 
         if(isCaptionDone && CaptionManager.Instance.EnterCaptionSequence())
         {
-            onEnd?.Invoke();
+            onEnd.Invoke();
             this.gameObject.SetActive(false);
         }
     }

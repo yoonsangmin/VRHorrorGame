@@ -79,7 +79,7 @@ public class HandButton : MonoBehaviour
 //            {
 //                pressed = true;
 //                // If we have an event, invoke it
-//                downEvent?.Invoke();
+//                downEvent.Invoke();
 //                timer = pressCoolTime;
 //            }
 //        }

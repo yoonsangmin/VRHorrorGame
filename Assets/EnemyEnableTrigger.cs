@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerTrigger : MonoBehaviour
+public class EnemyEnableTrigger : MonoBehaviour
 {
     [SerializeField]
 
@@ -15,7 +15,7 @@ public class PlayerTrigger : MonoBehaviour
     {
         if(other.CompareTag("VRRig") && isTriggered == false)
         {
-            onTrigger?.Invoke();
+            onTrigger.Invoke();
             isTriggered = true;
         }
     }

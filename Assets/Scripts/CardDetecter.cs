@@ -48,7 +48,7 @@ public class CardDetecter : MonoBehaviour
                 Destroy(go, 1f);
                 canSoundManager.DropCan(this.transform);
 
-                onCardHover?.Invoke();
+                onCardHover.Invoke();
                 isActivate = true;
 
                 CaptionManager.Instance.updateCaption("문이 열렸어!", 3, false);
