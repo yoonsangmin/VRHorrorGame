@@ -1,5 +1,4 @@
-﻿using Project.Core.Extensions;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,8 +7,6 @@ using UnityEngine.Events;
 
 public class ButtonTrigger : MonoBehaviour
 {
-    private CanSoundManager canSoundManager;
-
     public GameObject particle;
 
     [SerializeField]
@@ -26,7 +23,6 @@ public class ButtonTrigger : MonoBehaviour
 
     private void Start()
     {
-        canSoundManager = GameObject.FindWithTag("CanSoundManager").GetComponent<CanSoundManager>();
         audio = gameObject.AddComponent<AudioSource>();
         audio.clip = buttonSound;
     }
@@ -34,7 +30,7 @@ public class ButtonTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("들어왔음");
-        if (other.IsTriggerButton() && !pressedInProgress && timer <= 0)
+        if (other.tag == "ButtonActivator" && !pressedInProgress && timer <= 0)
         {
             pressedInProgress = true;
             onButtonPressed.Invoke();
@@ -43,13 +39,15 @@ public class ButtonTrigger : MonoBehaviour
             audio.Play();
             GameObject go = Instantiate(particle, this.transform);
             Destroy(go, 1f);
-            canSoundManager.DropCan(this.transform);
+
+            // 에너미한테 캔 위치 보내기
+            EnemyAI.OnListenSound(this.transform);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.IsTriggerButton())
+        if (other.tag == "ButtonActivator")//(other.IsTriggerButton())
         {
             pressedInProgress = false;
         }

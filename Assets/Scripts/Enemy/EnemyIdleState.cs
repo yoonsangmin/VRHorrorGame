@@ -17,7 +17,7 @@ public class EnemyIdleState : StateMachineBehaviour
         if (enemy.m_target == null)
         {
             enemy.Sight();
-            enemy.Listen();
+            enemy.ListenWalkSound();
         }
 
         if (enemy.m_target != null)

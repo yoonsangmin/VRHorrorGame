@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CanSound : MonoBehaviour
 {
-    private CanSoundManager canSoundManager;
-
     public GameObject particle;
     public AudioClip cansound;
     AudioSource audiosource = null;
@@ -22,15 +20,14 @@ public class CanSound : MonoBehaviour
             audiosource.volume = this.GetComponent<Rigidbody>().velocity.magnitude + 0.2f;
             audiosource.Play();
 
-            canSoundManager.DropCan(this.transform);
+            // 에너미한테 캔 위치 보내기
+            EnemyAI.OnListenSound(this.transform);
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        canSoundManager = GameObject.FindWithTag("CanSoundManager").GetComponent<CanSoundManager>();
-
         audiosource = this.gameObject.AddComponent<AudioSource>();
         audiosource.clip = cansound;
         audiosource.spatialBlend = 1.0f;

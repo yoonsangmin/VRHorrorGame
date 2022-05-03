@@ -5,8 +5,6 @@ using UnityEngine.Events;
 
 public class CardDetecter : MonoBehaviour
 {
-    private CanSoundManager canSoundManager;
-
     public GameObject particle;
 
     [SerializeField]
@@ -24,7 +22,6 @@ public class CardDetecter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canSoundManager = GameObject.FindWithTag("CanSoundManager").GetComponent<CanSoundManager>();
         audio = gameObject.AddComponent<AudioSource>();
         audio.volume = 0.5f;
     }
@@ -46,7 +43,9 @@ public class CardDetecter : MonoBehaviour
 
                 GameObject go = Instantiate(particle, this.transform);
                 Destroy(go, 1f);
-                canSoundManager.DropCan(this.transform);
+
+                // 에너미에게 캔 위치 보내기
+                EnemyAI.OnListenSound(this.transform);
 
                 onCardHover.Invoke();
                 isActivate = true;
@@ -60,7 +59,9 @@ public class CardDetecter : MonoBehaviour
 
                 GameObject go = Instantiate(particle, this.transform);
                 Destroy(go, 1f);
-                canSoundManager.DropCan(this.transform);
+
+                // 에너미에게 위치 보내기
+                EnemyAI.OnListenSound(this.transform);
 
                 CaptionManager.Instance.updateCaption("이 카드가 아니야", 3, false);
             }

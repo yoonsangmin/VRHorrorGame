@@ -59,9 +59,6 @@ public class EnemyAI : MonoBehaviour
 
     float soundtimer;
 
-    // 캔 관련
-    public CanSoundManager canSoundManager;
-
     //시야 관련 함수
     //플레이어 발견했고 발견했으면 따라가야함
     public void Sight()
@@ -104,7 +101,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    public void Listen()
+    public void ListenWalkSound()
     {
         if(Vector3.Distance(transform.position, player.transform.position) < listenDistance)
         {
@@ -113,17 +110,18 @@ public class EnemyAI : MonoBehaviour
                 SetTarget(player.transform);
             }
         }
+    }
 
-        // 캔 소리 듣기
-        if(m_target == null)
+    // 캔 소리 듣기
+    static public void OnListenSound(Transform target)
+    {
+        EnemyAI[] enemies = GameObject.FindObjectsOfType<EnemyAI>();
+
+        foreach (EnemyAI enemy in enemies)
         {
-            if(canSoundManager.isCanDropped)
-            {
-                if (Vector3.Distance(transform.position, canSoundManager.canDroppedTransform.position) < listenDistance)
-                {
-                    SetTarget(canSoundManager.canDroppedTransform);
-                }
-            }
+            if (enemy.gameObject.activeSelf && enemy.m_target == null)
+                if (Vector3.Distance(enemy.transform.position, target.position) < enemy.listenDistance)
+                    enemy.SetTarget(target);
         }
     }
 
@@ -245,8 +243,6 @@ public class EnemyAI : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         VRRig = GameObject.FindGameObjectWithTag("VRRig");
-
-        canSoundManager = GameObject.FindGameObjectWithTag("CanSoundManager").GetComponent<CanSoundManager>();
 
         audioSource = gameObject.AddComponent<AudioSource>();
         attackSource = gameObject.AddComponent<AudioSource>();
