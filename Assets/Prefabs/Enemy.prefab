@@ -815,22 +815,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7421ae198677d4e40ba114acce6051e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPlayerAttacked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: ToGameOverScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   m_angle: 45
-  m_distance: 7
+  detect_distance: 0
+  sight_distance: 2
   m_layerMask:
     serializedVersion: 2
     m_Bits: 4096

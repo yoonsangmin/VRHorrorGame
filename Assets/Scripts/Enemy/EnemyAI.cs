@@ -64,7 +64,7 @@ public class EnemyAI : MonoBehaviour
     public void Sight()
     {
         Collider[] t_cols = Physics.OverlapSphere(transform.position, detect_distance, m_layerMask);
-        
+
         if (t_cols.Length > 0)
         {
             Transform t_tfPlayer = t_cols[0].transform;
@@ -75,11 +75,12 @@ public class EnemyAI : MonoBehaviour
             {
                 if (Physics.Raycast(transform.position, t_direction, out RaycastHit t_hit, sight_distance, exc_layerMask))
                 {
+                    // Debug.Log("레이에 맞음");
                     if (t_hit.transform.tag == "Player" || t_hit.transform.tag == "Right Hand")
                     {
                         if(player.GetComponent<PlayerLittedState>().isPlayerLitted)
                         {
-                            //Debug.Log("빛에 있을 때 보는 중");
+                            // Debug.Log("빛에 있을 때 보는 중");
                             SetTarget(t_hit.transform);
                             playerBehindObstacle = false;
                         }
@@ -91,6 +92,7 @@ public class EnemyAI : MonoBehaviour
                         playerBehindObstacle = true;
                     }
 
+                    // Debug.Log("빛에 없을 때 보는 중");
                     //Debug.Log(t_hit.transform.tag);
                 }
                 else

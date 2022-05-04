@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputSource: 0
-  flashLight: {fileID: 1989323970929963152}
+  lightObject: {fileID: 1989323970929963152}
   offMat:
   - {fileID: 2100000, guid: 52b261e52d342b24f9d40280f2c7c34e, type: 2}
   - {fileID: 2100000, guid: 6c925334f073dbf4e8dbdcbe8942b22e, type: 2}

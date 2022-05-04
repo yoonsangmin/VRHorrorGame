@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.XR;
-using UnityEngine.XR.Interaction.Toolkit;
 
 public class FlashLight : MonoBehaviour
 {
@@ -14,7 +11,7 @@ public class FlashLight : MonoBehaviour
 
 
 
-    public GameObject flashLight;
+    public GameObject lightObject;
 
     public Material[] offMat;
     public Material[] onMat;
@@ -48,23 +45,23 @@ public class FlashLight : MonoBehaviour
         onMats[5] = onMat[2];
 
         meshRenderer.materials = offMats;
-        flashLight.SetActive(false);
+        lightObject.SetActive(false);
 
         itemManager = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<ItemManager>();
     }
 
     public void TurnOnFlash()
     {
-        if(flashLight.activeSelf == false)
+        if(lightObject.activeSelf == false)
         {
             meshRenderer.materials = onMats;
-            flashLight.SetActive(true);
+            lightObject.SetActive(true);
             audioSource.Play();
         }
         else
         {
             meshRenderer.materials = offMats;
-            flashLight.SetActive(false);
+            lightObject.SetActive(false);
             audioSource.Play();
         }    
     }

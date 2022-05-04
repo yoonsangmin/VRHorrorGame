@@ -4878,7 +4878,7 @@ PrefabInstance:
     - target: {fileID: 3287279063305097039, guid: 42d29ea3d220be94b99aebb9e3863e93,
         type: 3}
       propertyPath: m_angle
-      value: 361
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3287279063305097039, guid: 42d29ea3d220be94b99aebb9e3863e93,
         type: 3}
@@ -4893,7 +4893,7 @@ PrefabInstance:
     - target: {fileID: 3287279063305097039, guid: 42d29ea3d220be94b99aebb9e3863e93,
         type: 3}
       propertyPath: sight_distance
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3287279063305097039, guid: 42d29ea3d220be94b99aebb9e3863e93,
         type: 3}
@@ -11812,7 +11812,7 @@ PrefabInstance:
     - target: {fileID: 3287279063305097039, guid: 42d29ea3d220be94b99aebb9e3863e93,
         type: 3}
       propertyPath: m_angle
-      value: 361
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3287279063305097039, guid: 42d29ea3d220be94b99aebb9e3863e93,
         type: 3}
@@ -11827,7 +11827,7 @@ PrefabInstance:
     - target: {fileID: 3287279063305097039, guid: 42d29ea3d220be94b99aebb9e3863e93,
         type: 3}
       propertyPath: sight_distance
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3287279063305097039, guid: 42d29ea3d220be94b99aebb9e3863e93,
         type: 3}
@@ -33551,6 +33551,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2331945636928939204, guid: 13ec9e860ae29c847bf6539619342d86,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2331945636928939224, guid: 13ec9e860ae29c847bf6539619342d86,
         type: 3}
       propertyPath: lightThresholdDistance
@@ -57592,7 +57597,7 @@ PrefabInstance:
     - target: {fileID: 3287279063305097039, guid: 42d29ea3d220be94b99aebb9e3863e93,
         type: 3}
       propertyPath: m_angle
-      value: 361
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3287279063305097039, guid: 42d29ea3d220be94b99aebb9e3863e93,
         type: 3}
@@ -57608,11 +57613,6 @@ PrefabInstance:
         type: 3}
       propertyPath: listenDistance
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3287279063305097039, guid: 42d29ea3d220be94b99aebb9e3863e93,
-        type: 3}
-      propertyPath: sight_distance
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3287279063305097039, guid: 42d29ea3d220be94b99aebb9e3863e93,
         type: 3}
