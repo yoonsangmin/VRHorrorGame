@@ -1787,12 +1787,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2331945638094018267}
   - component: {fileID: 2331945638094018266}
+  - component: {fileID: 2331945638094018258}
+  - component: {fileID: 2331945638094018269}
   - component: {fileID: 2331945638094018265}
   - component: {fileID: 2331945638094018264}
   - component: {fileID: 2331945638094018270}
   - component: {fileID: 2331945638094018271}
-  - component: {fileID: 2331945638094018258}
-  - component: {fileID: 2331945638094018269}
   - component: {fileID: 2331945638094018268}
   m_Layer: 10
   m_Name: VR Rig
@@ -1834,6 +1834,46 @@ MonoBehaviour:
   m_TrackingOriginMode: 2
   m_TrackingSpace: 3
   m_CameraYOffset: 1.36144
+--- !u!114 &2331945638094018258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331945638094018245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0d9ba6360b88c44b02d60321cdd12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onButtonPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  speed: 2.76
+  inputSource: 4
+  gravity: -9.81
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  additionalHeight: 0.2
+--- !u!143 &2331945638094018269
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331945638094018245}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.15
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &2331945638094018265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1898,46 +1938,6 @@ MonoBehaviour:
   m_Controllers:
   - {fileID: 2331945637368354259}
   m_DeadZone: 0.75
---- !u!114 &2331945638094018258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2331945638094018245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0d9ba6360b88c44b02d60321cdd12f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onButtonPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  speed: 2.76
-  inputSource: 4
-  gravity: -9.81
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  additionalHeight: 0.2
---- !u!143 &2331945638094018269
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2331945638094018245}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.15
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &2331945638094018268
 MonoBehaviour:
   m_ObjectHideFlags: 0
